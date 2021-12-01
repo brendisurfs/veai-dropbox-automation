@@ -2,10 +2,20 @@ package main
 
 import (
 	"brendisurfs/go-dropbox-processor/enhancer"
+	"log"
 	"time"
+
+	"github.com/joho/godotenv"
 )
 
 var finished = make(chan bool)
+
+func init() {
+	err := godotenv.Load("fs.env")
+	if err != nil {
+		log.Fatal("could not load env, program wont run.")
+	}
+}
 
 func main() {
 	// var proccessedList map[int]string

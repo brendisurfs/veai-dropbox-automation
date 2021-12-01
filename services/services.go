@@ -1,10 +1,12 @@
 package services
 
+import "os"
+
 // OUTPUT_FOLDER - where the program should output to.
-const OUTPUT_FOLDER string = "C:/Users/brend/Dropbox/Enhanced_Video_Exports"
+var OUTPUT_FOLDER string = os.Getenv("OUTPUT_FOLDER")
 
 // PROC_FOLDER - folder to ingest footage from.
-const PROC_FOLDER string = "/mnt/c/Users/brend/Dropbox/VideoEnhance_ProcFolder/"
+var PROC_FOLDER string = os.Getenv("PROC_FOLDER")
 
 // BeenProcessed - type for defining whether the file has been processed successfully before.
 type BeenProcessed struct {
