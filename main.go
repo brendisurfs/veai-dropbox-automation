@@ -8,7 +8,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
-var finished = make(chan bool)
+// var finished = make(chan bool)
 
 func init() {
 	err := godotenv.Load("fs.env")
